@@ -1,0 +1,10 @@
+#INDEPENDENT SAMPLE T TEST
+MUMBAI_DELHI_JEANS_RATING <- read_excel("C:/Users/Gaurav/Downloads/MUMBAI DELHI JEANS RATING.xlsx")
+attach(MUMBAI_DELHI_JEANS_RATING)
+hist(MUMBAI)
+hist(DELHI)
+library(norm)
+library(nortest)
+shapiro.test(MUMBAI)
+shapiro.test(DELHI)
+t.test(MUMBAI,DELHI,mu = 0)
